@@ -1,0 +1,26 @@
+.header {
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 232, 31, 0.4);
+
+  &__title {
+    color: #ffe81f;
+    text-align: center;
+    letter-spacing: 3px;
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__menu-item a {
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: white;
+    }
+  }
+}

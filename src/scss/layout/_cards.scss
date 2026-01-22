@@ -1,0 +1,27 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+
+  &__card {
+    background: rgba(15, 23, 42, 0.9);;
+    border: 1px solid transparent;
+    border-radius:  12px;
+    padding: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, border 0.3s easen, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px) scale(1.02);
+      border-color: #ffe81f;
+      box-shadow: 0 0 20px rgba(255, 232, 31, 0.4);
+    }
+  }
+
+  &__card-title {
+    color:#ffe81f;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,43 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  &.hidden {
+    display: none;
+  }
+
+  &__content {
+    background: #0f172a;   
+    padding: 30px;
+    border-radius: 12px;  
+    max-width: 500px;
+    border: 1px solid #ffe81f;   
+    box-shadow: 0 0 25px rgba(255, 232, 31, 0.4); 
+    position: relative;
+
+    &__title {
+      color: #ffe81f; 
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      color: #94a3b8; 
+      line-height: 1.6;
+    }
+
+    &__close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 26px;
+      cursor: pointer;
+      color: #ffe81f; 
+    }
+  }
+}
+

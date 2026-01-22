@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
 }
@@ -62,26 +63,39 @@ button {
 }
 
 .header {
-  padding: 20px;
-  border-bottom: 1px solid rgba(255, 232, 31, 0.4);
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(255, 232, 31, 0.35);
+  background: rgba(2, 6, 23, 0.85);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
 }
+
 .header__title {
-  color: #ffe81f;
   text-align: center;
-  letter-spacing: 3px;
+  color: #ffe81f;
+  font-size: 34px;
+  letter-spacing: 4px;
+  margin-bottom: 12px;
 }
+
 .header__menu {
+  list-style: none;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  padding: 0;
-  list-style: none;
+  gap: 26px;
 }
+
 .header__menu-item a {
-  transition: color 0.3s ease;
+  color: #ffe81f;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
 .header__menu-item a:hover {
-  color: white;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 232, 31, 0.6);
 }
 
 .modal {
@@ -120,4 +134,104 @@ button {
   font-size: 26px;
   cursor: pointer;
   color: #ffe81f;
+}
+
+/* =========================
+   BASE
+========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #020617 0%, #000 70%);
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+/* =========================
+   MAIN / SECTIONS
+========================= */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.section {
+  margin-bottom: 70px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(255, 232, 31, 0.25);
+}
+
+.section__title {
+  color: #ffe81f;
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.section__text {
+  color: #cbd5f5;
+  font-size: 16px;
+  margin-bottom: 14px;
+  max-width: 900px;
+}
+
+/* =========================
+   LISTS
+========================= */
+.section__list {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.section__list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 14px;
+  color: #e5e7eb;
+}
+
+.section__list li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffe81f;
+  font-size: 14px;
+}
+
+/* =========================
+   INTRO SPECIAL
+========================= */
+.home__intro {
+  border-left: none;
+  text-align: center;
+}
+
+.home__intro .section__title {
+  font-size: 30px;
+}
+
+.home__intro .section__text {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  padding: 24px 10px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 232, 31, 0.25);
+  color: #94a3b8;
+  font-size: 14px;
 }/*# sourceMappingURL=main.css.map */

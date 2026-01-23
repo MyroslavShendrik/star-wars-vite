@@ -149,8 +149,8 @@ button {
 
 body {
   font-family: "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #020617 0%, #000 70%);
-  color: #e5e7eb;
+  background: radial-gradient(circle at top, #020617 0%, #1c1c1c 70%);
+  color: #d1d1d1;
   line-height: 1.7;
 }
 

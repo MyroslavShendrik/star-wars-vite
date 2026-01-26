@@ -1,0 +1,25 @@
+.section--jedi {
+  background: linear-gradient(90deg, #102a43, #3a0f0f);
+  padding: 60px 20px;
+
+  .section__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .section__image--jedi {
+    display: block;
+    margin: 0 auto 25px;
+    border: 3px solid #f5c518;
+    border-radius: 12px;
+  }
+
+  .section__text--jedi {
+    max-width: 900px;
+    margin: 0 auto 15px;
+    text-align: center;
+    color: #f5c518;
+    font-size: 18px;
+  }
+}

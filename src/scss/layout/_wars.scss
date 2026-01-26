@@ -1,0 +1,27 @@
+.section--wars {
+  background: linear-gradient(180deg, #1a0000, #000000);
+  padding: 60px 20px;
+
+  .section__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .section__image--wars {
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 12px;
+    border: 2px solid #ff0000;
+  }
+
+  .section__text--wars {
+    max-width: 900px;
+    margin: 0 auto 15px;
+    text-align: center;
+    color: #ff5555;
+    font-size: 18px;
+  }
+}
+
+

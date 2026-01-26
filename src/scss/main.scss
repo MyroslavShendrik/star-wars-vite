@@ -1,10 +1,11 @@
-@use'./utils/variables';
-@use './base/reset';
-@use './layout/cards';
-@use './layout/footer';
-@use './layout/header';
-@use './layout/modal';
-@use './layout/home';
+@use "./base/reset";
+@use "./base/body";
 
+@use "./layout/header";
+@use "./layout/footer";
 
-
+@use "./layout/about";
+@use "./layout/universe";
+@use "./layout/force";
+@use "./layout/jedi";
+@use "./layout/wars";

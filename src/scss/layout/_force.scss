@@ -1,0 +1,25 @@
+.section--force {
+  background: linear-gradient(180deg, #0b0d17, #001f3f);
+  padding: 60px 20px;
+
+  .section__title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .section__image--force {
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    border: 3px solid #00f;
+  }
+
+  .section__text--force {
+    max-width: 900px;
+    margin: 0 auto 15px;
+    text-align: center;
+    color: #00f;
+    font-size: 18px;
+  }
+}

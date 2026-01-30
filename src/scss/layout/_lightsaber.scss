@@ -1,0 +1,25 @@
+.sw-lightsaber {
+  padding: 60px;
+  background: linear-gradient(135deg, #0b0d13, #1a1a1a);
+  border-radius: 24px;
+
+  h2 {
+    text-align: center;
+    color: #feda4a;
+    margin-bottom: 32px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  li {
+    background: #151822;
+    padding: 14px 22px;
+    border-radius: 14px;
+    font-weight: 500;
+  }
+}

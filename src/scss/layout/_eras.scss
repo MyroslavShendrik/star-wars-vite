@@ -1,0 +1,25 @@
+.sw-era {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 48px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #111 0%, #151822 100%);
+  border-radius: 20px;
+
+  img {
+    width: 40%;
+    object-fit: cover;
+  }
+
+  &__title {
+    color: #feda4a;
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  p {
+    max-width: 500px;
+    line-height: 1.6;
+  }
+}

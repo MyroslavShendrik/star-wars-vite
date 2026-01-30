@@ -1,0 +1,20 @@
+.sw-factions {
+  padding: 60px 0;
+}
+
+.sw-faction {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background: #151822;
+  border-radius: 18px;
+  margin-bottom: 24px;
+
+  img {
+    width: 180px;
+  }
+
+  h3 {
+    color: #feda4a;
+  }
+}

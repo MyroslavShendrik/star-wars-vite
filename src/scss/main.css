@@ -178,4 +178,70 @@ body {
   text-align: center;
   color: #ff5555;
   font-size: 18px;
+}
+
+.sw-era {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  padding: 48px;
+  margin-bottom: 40px;
+  background: linear-gradient(135deg, #111 0%, #151822 100%);
+  border-radius: 20px;
+}
+.sw-era img {
+  width: 40%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sw-era__title {
+  color: #feda4a;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+.sw-era p {
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.sw-factions {
+  padding: 60px 0;
+}
+
+.sw-faction {
+  display: flex;
+  gap: 24px;
+  padding: 32px;
+  background: #151822;
+  border-radius: 18px;
+  margin-bottom: 24px;
+}
+.sw-faction img {
+  width: 180px;
+}
+.sw-faction h3 {
+  color: #feda4a;
+}
+
+.sw-lightsaber {
+  padding: 60px;
+  background: linear-gradient(135deg, #0b0d13, #1a1a1a);
+  border-radius: 24px;
+}
+.sw-lightsaber h2 {
+  text-align: center;
+  color: #feda4a;
+  margin-bottom: 32px;
+}
+.sw-lightsaber ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.sw-lightsaber li {
+  background: #151822;
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-weight: 500;
 }/*# sourceMappingURL=main.css.map */

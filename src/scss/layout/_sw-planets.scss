@@ -1,0 +1,46 @@
+.sw-planets {
+  padding: 80px 20px;
+  background: #05070f;
+  color: #fff;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    height: 100%;
+  }
+}
+
+.planet-card {
+  background: #0f1626;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #1d2945;
+  transition: 0.3s;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: #ffd000;
+    box-shadow: 0 0 20px rgba(255, 208, 0, 0.3);
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    color: #ffd000;
+  }
+
+  &__text {
+    line-height: 1.5;
+    color: #cfd6e6;
+  }
+}

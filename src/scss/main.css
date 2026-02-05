@@ -373,33 +373,39 @@ body {
   border-radius: 14px;
   border: 1px solid #1a2240;
   background: #0b1020;
-  transition: 0.3s;
-}
-.character-group:hover {
-  transform: translateY(-5px);
 }
 .character-group__title {
   margin-bottom: 15px;
   color: #ffd000;
 }
 .character-group__list {
-  padding-left: 18px;
+  padding-left: 0;
+  list-style: none;
 }
 .character-group__list li {
   margin-bottom: 6px;
+  padding: 8px 10px;
+  border-radius: 8px;
   color: #cfd6e6;
+  cursor: pointer;
+  transition: 0.25s;
 }
-.character-group--jedi:hover {
-  border-color: #4dabff;
+.character-group__list li:hover {
+  background: #1a2440;
+  color: #fff;
+  padding-left: 16px;
 }
-.character-group--sith:hover {
-  border-color: #ff3b3b;
+.character-group--jedi li:hover {
+  background: rgba(77, 171, 255, 0.2);
 }
-.character-group--rebels:hover {
-  border-color: #ffb347;
+.character-group--sith li:hover {
+  background: rgba(255, 59, 59, 0.2);
 }
-.character-group--empire:hover {
-  border-color: #999;
+.character-group--rebels li:hover {
+  background: rgba(255, 179, 71, 0.2);
+}
+.character-group--empire li:hover {
+  background: rgba(180, 180, 180, 0.2);
 }
 
 .sw-movies {

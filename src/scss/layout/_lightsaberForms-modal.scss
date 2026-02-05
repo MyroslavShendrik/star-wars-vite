@@ -1,0 +1,65 @@
+.form-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-modal {
+  background: #111;
+  color: white;
+  width: 900px;
+  max-width: 95%;
+  border-radius: 12px;
+  padding: 25px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid #555;
+  color: white;
+  padding: 5px 10px;
+}
+
+.modal-content {
+  display: flex;
+  gap: 25px;
+}
+
+.modal-img {
+  width: 320px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.modal-info {
+  flex: 1;
+}
+
+.modal-users li {
+  margin-bottom: 6px;
+}
+
+.forms-list li {
+  cursor: pointer;
+  margin-bottom: 8px;
+
+  &:hover {
+    color: #ffe81f;
+  }
+}
+

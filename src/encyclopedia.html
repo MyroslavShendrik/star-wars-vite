@@ -25,28 +25,28 @@
 <!-- ЕПОХИ -->
 <section class="sw-era sw-era--old-republic">
 <h2 class="sw-era__title">Стара Республіка</h2>
-<img src="./images/eras/old-republic.jpg" alt="Old Republic">
+<img src="./images/old-republic.webp" alt="Old Republic">
 <p>Епоха тисячолітніх війн між Джедаями та Сітхами, формування орденів та перших галактичних імперій.</p>
 </section>
 
 
 <section class="sw-era sw-era--clone-wars">
 <h2 class="sw-era__title">Війни клонів</h2>
-<img src="./images/eras/clone-wars.jpg" alt="Clone Wars">
+<img src="./images/clone-wars.jpg" alt="Clone Wars">
 <p>Галактичний конфлікт між Республікою та КНС, що призвів до падіння джедаїв і виникнення Імперії.</p>
 </section>
 
 
 <section class="sw-era sw-era--empire">
 <h2 class="sw-era__title">Час Імперії</h2>
-<img src="./images/eras/empire.jpg" alt="Galactic Empire">
+<img src="./images/galactic-empire.jpg" alt="Galactic Empire">
 <p>Правління Палпатіна, переслідування джедаїв і народження Повстанського Альянсу.</p>
 </section>
 
 
 <section class="sw-era sw-era--new-republic">
 <h2 class="sw-era__title">Нова Республіка</h2>
-<img src="./images/eras/new-republic.jpg" alt="New Republic">
+<img src="./images/new-republic.jpg" alt="New Republic">
 <p>Період відновлення після падіння Імперії та поява Першого Ордену.</p>
 </section>
 
@@ -94,17 +94,19 @@
 
 <!-- ФОРМИ БОЮ -->
 <section class="sw-lightsaber">
-<h2 class="sw-section-title">Форми бою на світлових мечах</h2>
-<ul>
-<li>Form I — Shii-Cho</li>
-<li>Form II — Makashi</li>
-<li>Form III — Soresu</li>
-<li>Form IV — Ataru</li>
-<li>Form V — Djem So</li>
-<li>Form VI — Niman</li>
-<li>Form VII — Juyo / Vaapad</li>
-</ul>
+  <h2 class="sw-section-title">Форми бою на світлових мечах</h2>
+
+  <ul class="forms-list">
+    <li data-form="shii-cho">Form I — Shii-Cho</li>
+    <li data-form="makashi">Form II — Makashi</li>
+    <li data-form="soresu">Form III — Soresu</li>
+    <li data-form="ataru">Form IV — Ataru</li>
+    <li data-form="djem-so">Form V — Djem So</li>
+    <li data-form="niman">Form VI — Niman</li>
+    <li data-form="juyo">Form VII — Juyo / Vaapad</li>
+  </ul>
 </section>
+
 
 
 <!-- ПЛАНЕТИ -->
@@ -112,7 +114,28 @@
 <h2 class="sw-section-title">Відомі планети</h2>
 <div class="sw-planets__grid">
 </main>
-  
-<script src="./js/modal.js"></script>
+<!-- Modal for lightsaber section -->
+  <div class="form-modal-backdrop is-hidden">
+  <div class="form-modal">
+
+    <button class="modal-close">✕</button>
+
+    <div class="modal-content">
+      <img class="modal-img" src="" alt="">
+
+      <div class="modal-info">
+        <h3 class="modal-title"></h3>
+        <p class="modal-desc"></p>
+
+        <h4>Відомі користувачі:</h4>
+        <ul class="modal-users"></ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="module" src="./js/forms-data.js"></script>
+<script type="module" src="./js/modal.js"></script>
 </body>
 </html>

@@ -1,27 +1,45 @@
-const cards = document.querySelectorAll('.cards__card');
-const modal = document.getElementById('modal');
-const modalTitle = document.querySelector('.modal__content__title');
-const modalText = document.querySelector('.modal__content__text');
-const modalClose = document.querySelector('.modal__content__close');
+import "./forms-data.js";
+  
+const forms = document.querySelectorAll(".forms-list li");
+const backdrop = document.querySelector(".form-modal-backdrop");
 
-cards.forEach(card => {
-  card.addEventListener('click', () => {
-    const name = card.dataset.name;
-    const text = card.dataset.text;
-    if(name && text){
-      modalTitle.textContent = name;
-      modalText.textContent = text;
-      modal.classList.remove('hidden');
-    }
+const modalImg = document.querySelector(".modal-img");
+const modalTitle = document.querySelector(".modal-title");
+const modalDesc = document.querySelector(".modal-desc");
+const modalUsers = document.querySelector(".modal-users");
+
+const closeBtn = document.querySelector(".modal-close");
+
+const formsData =
+  JSON.parse(localStorage.getItem("lightsaberForms")) || [];
+
+forms.forEach(form => {
+  form.addEventListener("click", () => {
+    const id = form.dataset.form;
+    const data = formsData.find(f => f.id === id);
+
+    modalImg.src = data.image;
+    modalTitle.textContent = data.name;
+    modalDesc.textContent = data.description;
+
+    modalUsers.innerHTML = data.users
+      .map(user => `<li>${user}</li>`)
+      .join("");
+
+    backdrop.classList.remove("is-hidden");
   });
 });
 
-modalClose.addEventListener('click', () => {
-  modal.classList.add('hidden');
+function closeModal() {
+  backdrop.classList.add("is-hidden");
+}
+
+closeBtn.addEventListener("click", closeModal);
+
+backdrop.addEventListener("click", e => {
+  if (e.target === backdrop) closeModal();
 });
 
-window.addEventListener('click', (e) => {
-  if(e.target === modal){
-    modal.classList.add('hidden');
-  }
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
 });

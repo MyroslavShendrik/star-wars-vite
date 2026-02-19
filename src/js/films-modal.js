@@ -44,36 +44,67 @@ const moviesData = [
   },
 ];
 
-// ---------- LOCALSTORAGE ----------
-if (!localStorage.getItem("moviesData")) {
-  localStorage.setItem("moviesData", JSON.stringify(moviesData));
-}
-
-// ---------- MODAL ----------
 document.addEventListener("DOMContentLoaded", function () {
+  // ---------- дані ----------
   const movies = JSON.parse(localStorage.getItem("moviesData")) || [];
 
+  // ---------- елементи ----------
   const modal = document.getElementById("movieModal");
   const modalTitle = document.getElementById("modalMovieTitle");
   const modalStory = document.getElementById("modalMovieStory");
   const modalImage = document.getElementById("modalMovieImage");
   const modalClose = document.getElementById("movieModalClose");
 
-  if (!modal || !modalTitle || !modalStory || !modalImage || !modalClose) {
-    console.error("Модалка або її елементи не знайдено в DOM!");
-    return;
+  const confirmModal = document.getElementById("confirmModal");
+  const confirmYes = document.getElementById("confirmYes");
+  const confirmNo = document.getElementById("confirmNo");
+
+  // ---------- таймери ----------
+  let timer30 = null;
+  let timer15 = null;
+
+  function start30() {
+    clearTimeout(timer30);
+    timer30 = setTimeout(() => {
+      confirmModal.classList.add("active");
+      timer15 = setTimeout(() => {
+        closeAll();
+      }, 15000);
+    }, 30000);
   }
 
-  // Відкриття модалки по кліку на фільм
+  function closeAll() {
+    clearTimeout(timer30);
+    clearTimeout(timer15);
+    confirmModal.classList.remove("active");
+    modal.classList.remove("active");
+  }
+
+  // ---------- кнопки ----------
+  confirmYes.addEventListener("click", () => {
+    confirmModal.classList.remove("active");
+    clearTimeout(timer15);
+    start30();
+  });
+
+  confirmNo.addEventListener("click", () => {
+    closeAll();
+  });
+
+  modalClose.addEventListener("click", () => {
+    clearTimeout(timer30);
+    clearTimeout(timer15);
+    modal.classList.remove("active");
+  });
+
+  // ---------- відкриття модалки ----------
   const movieItems = document.querySelectorAll(".sw-movies__item");
-  for (let i = 0; i < movieItems.length; i++) {
-    movieItems[i].addEventListener("click", function () {
-      const titleEl = movieItems[i].querySelector("h3");
+  movieItems.forEach(item => {
+    item.addEventListener("click", () => {
+      const titleEl = item.querySelector("h3");
       if (!titleEl) return;
 
-      const movie = movies.find(function (m) {
-        return m.title === titleEl.textContent;
-      });
+      const movie = movies.find(m => m.title === titleEl.textContent);
       if (!movie) return;
 
       modalTitle.textContent = movie.title;
@@ -81,18 +112,16 @@ document.addEventListener("DOMContentLoaded", function () {
       modalImage.src = movie.image;
 
       modal.classList.add("active");
+      start30(); // ✅ тут виклик працює
     });
-  }
-
-  // Закриття модалки по кнопці
-  modalClose.addEventListener("click", function () {
-    modal.classList.remove("active");
   });
 
-  // Закриття модалки по бекдропу
-  modal.addEventListener("click", function (e) {
+  // Закриття по бекдропу
+  modal.addEventListener("click", e => {
     if (e.target === modal) {
       modal.classList.remove("active");
+      clearTimeout(timer30);
+      clearTimeout(timer15);
     }
   });
 });

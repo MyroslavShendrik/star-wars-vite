@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       timer15 = setTimeout(() => {
         closeAll();
       }, 15000);
-    }, 30000);
+    }, 3000);
   }
 
   function closeAll() {

@@ -1,0 +1,26 @@
+@use "./scss/base/reset";
+@use "./scss/base/body";
+
+
+@use "./scss/layout/header";
+@use "./scss/layout/footer";
+
+@use "./scss/layout/about";
+@use "./scss/layout/universe";
+@use "./scss/layout/force";
+@use "./scss/layout/jedi";
+@use "./scss/layout/wars";
+@use "./scss/layout/eras";
+@use "./scss/layout/factions";
+@use "./scss/layout/lightsaber";
+@use "./scss/layout/lightsaberForms-modal";
+@use "./scss/layout/sw-planets";
+@use "./scss/layout/sw-characters";
+@use "./scss/layout/sw-movies";
+
+
+@use "./scss/layout/films_modal";
+@use "./scss/layout/warningModal";
+
+
+

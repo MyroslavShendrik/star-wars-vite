@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Персонажі – Star Wars Fan Hub</title>
    
-  <script type="module" crossorigin src="/star-wars-vite/assets/encyclopedia-5a20dbff.js"></script>
-  <link rel="stylesheet" href="/star-wars-vite/assets/encyclopedia-13bb6dbf.css">
+  <script type="module" crossorigin src="/star-wars-vite/assets/encyclopedia-7e90d712.js"></script>
+  <link rel="modulepreload" crossorigin href="/star-wars-vite/assets/timer-a2440381.js">
+  <link rel="stylesheet" href="/star-wars-vite/assets/timer-4133577b.css">
 </head>
 <body>
 
@@ -19,6 +20,30 @@
       <li class="header__menu-item"><a href="shop.html">Магазин</a></li>
     </ul>
   </nav>
+
+
+  <div class="dev-timer">
+  <h2 class="dev-timer__title">До завершення розробки залишилось:</h2>
+
+  <div class="dev-timer__clock" id="dev-timer">
+    <div class="dev-timer__item">
+      <span data-value="days">00</span>
+      <small>Днів</small>
+    </div>
+    <div class="dev-timer__item">
+      <span data-value="hours">00</span>
+      <small>Годин</small>
+    </div>
+    <div class="dev-timer__item">
+      <span data-value="mins">00</span>
+      <small>Хвилин</small>
+    </div>
+    <div class="dev-timer__item">
+      <span data-value="secs">00</span>
+      <small>Секунд</small>
+    </div>
+  </div>
+</div>
 </header>
 
 <main class="sw-encyclopedia">
@@ -345,6 +370,7 @@
 
   </div>
 </div>
+
 
 
 

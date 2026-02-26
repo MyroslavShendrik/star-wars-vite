@@ -449,6 +449,48 @@ body {
   line-height: 1.5;
 }
 
+.dev-timer {
+  text-align: center;
+  padding: 30px 15px;
+  background: linear-gradient(180deg, #000000, #111111);
+  color: #ffe81f;
+  border-bottom: 2px solid #ffe81f;
+}
+
+.dev-timer__title {
+  font-size: 22px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.dev-timer__clock {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.dev-timer__item {
+  background: #000;
+  padding: 15px 20px;
+  border: 2px solid #ffe81f;
+  border-radius: 10px;
+  min-width: 90px;
+  box-shadow: 0 0 15px rgba(255, 232, 31, 0.6);
+}
+
+.dev-timer__item span {
+  display: block;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.dev-timer__item small {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
 .movie-modal {
   position: fixed;
   inset: 0;

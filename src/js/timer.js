@@ -8,6 +8,8 @@ class DevCountdown {
     this.minsEl = this.container.querySelector('[data-value="mins"]');
     this.secsEl = this.container.querySelector('[data-value="secs"]');
 
+    this.messageEl = null;
+
     this.start();
   }
 
@@ -18,8 +20,7 @@ class DevCountdown {
 
       if (timeLeft <= 0) {
         clearInterval(this.intervalId);
-        this.container.innerHTML = 
-          "<h2 style='color:#00ffcc'>Проект завершено 🚀</h2>";
+        this.showFinished();
         return;
       }
 
@@ -36,11 +37,24 @@ class DevCountdown {
     }, 1000);
   }
 
+  showFinished() {
+    this.daysEl.textContent = "00";
+    this.hoursEl.textContent = "00";
+    this.minsEl.textContent = "00";
+    this.secsEl.textContent = "00";
+
+    if (!this.messageEl) {
+      this.messageEl = document.createElement("div");
+      this.messageEl.classList.add("dev-timer__finished");
+      this.messageEl.textContent = "🚀 Проект завершено";
+      this.container.appendChild(this.messageEl);
+    }
+  }
+
   pad(value) {
     return String(value).padStart(2, "0");
   }
 }
-
 
 // 📅 Кінець березня 2026
 const projectEndDate = new Date("2026-03-31T23:59:59").getTime();

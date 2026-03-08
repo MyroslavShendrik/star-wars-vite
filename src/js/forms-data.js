@@ -40,7 +40,7 @@ let formsData = [
       "Люмінарія Ундулі"
     ],
     image: new URL(
-      "../images/forms/soresu.jpg",
+      "../images/forms/soresu.png",
       import.meta.url
     ).href,
   },

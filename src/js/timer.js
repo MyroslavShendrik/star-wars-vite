@@ -29,7 +29,7 @@ class DevCountdown {
       const mins = Math.floor((timeLeft / (1000 * 60)) % 60);
       const secs = Math.floor((timeLeft / 1000) % 60);
 
-      this.daysEl.textContent = days;
+      this.daysEl.textContent = this.pad(days);
       this.hoursEl.textContent = this.pad(hours);
       this.minsEl.textContent = this.pad(mins);
       this.secsEl.textContent = this.pad(secs);
@@ -42,6 +42,8 @@ class DevCountdown {
     this.hoursEl.textContent = "00";
     this.minsEl.textContent = "00";
     this.secsEl.textContent = "00";
+
+    this.container.classList.add("finished");
 
     if (!this.messageEl) {
       this.messageEl = document.createElement("div");
@@ -56,7 +58,7 @@ class DevCountdown {
   }
 }
 
-// 📅 Кінець березня 2026
+// дата завершення проекту
 const projectEndDate = new Date("2026-03-31T23:59:59").getTime();
 
 new DevCountdown("#dev-timer", projectEndDate);

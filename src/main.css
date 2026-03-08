@@ -451,53 +451,51 @@ body {
 
 .header {
   position: relative;
-  padding: 20px 140px 20px 20px;
+  padding: 40px 180px 40px 40px;
 }
 
-/* Компактний таймер */
 .dev-timer {
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 20px;
-  width: 120px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.85);
+  width: 140px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   border: 1px solid #ffe81f;
-  box-shadow: 0 0 10px rgba(255, 232, 31, 0.4);
+  box-shadow: 0 0 12px rgba(255, 232, 31, 0.5);
   color: #ffe81f;
   font-size: 11px;
   text-align: center;
+  transition: all 0.3s ease;
 }
-
-/* Заголовок робимо дуже маленьким */
 .dev-timer__title {
   font-size: 9px;
   margin-bottom: 6px;
   letter-spacing: 1px;
 }
-
-/* Цифри в один ряд */
 .dev-timer__clock {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 4px;
 }
-
 .dev-timer__item span {
   display: block;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
+  line-height: 1;
 }
-
-.dev-timer__item small {
-  display: none;
-}
-
-/* повідомлення після завершення */
 .dev-timer__finished {
   margin-top: 6px;
   font-size: 10px;
+  color: #00ffcc;
+  font-weight: bold;
+}
+
+/* стиль після завершення */
+.dev-timer.finished {
+  border: 1px solid #00ffcc;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 0.7);
   color: #00ffcc;
 }
 

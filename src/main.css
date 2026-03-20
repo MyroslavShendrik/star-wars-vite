@@ -770,4 +770,37 @@ body {
     width: 140px;
     height: 140px;
   }
+}
+.header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #000814, #001d3d);
+}
+
+.header-stars {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+}
+
+.glow {
+  box-shadow: 0 0 10px white, 0 0 20px white;
+  opacity: 1;
+}
+
+.header__title,
+.header__menu,
+.dev-timer {
+  position: relative;
+  z-index: 2;
 }/*# sourceMappingURL=main.css.map */

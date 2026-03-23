@@ -10,31 +10,35 @@ class DevCountdown {
 
     this.messageEl = null;
 
+    this.update();
     this.start();
   }
 
   start() {
     this.intervalId = setInterval(() => {
-      const now = Date.now();
-      const timeLeft = this.targetDate - now;
-
-      if (timeLeft <= 0) {
-        clearInterval(this.intervalId);
-        this.showFinished();
-        return;
-      }
-
-      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-      const mins = Math.floor((timeLeft / (1000 * 60)) % 60);
-      const secs = Math.floor((timeLeft / 1000) % 60);
-
-      this.daysEl.textContent = this.pad(days);
-      this.hoursEl.textContent = this.pad(hours);
-      this.minsEl.textContent = this.pad(mins);
-      this.secsEl.textContent = this.pad(secs);
-
+      this.update();
     }, 1000);
+  }
+
+  update() {
+    const now = Date.now();
+    const timeLeft = this.targetDate - now;
+
+    if (timeLeft <= 0) {
+      clearInterval(this.intervalId);
+      this.showFinished();
+      return;
+    }
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((timeLeft / (1000 * 60)) % 60);
+    const secs = Math.floor((timeLeft / 1000) % 60);
+
+    this.daysEl.textContent = this.pad(days);
+    this.hoursEl.textContent = this.pad(hours);
+    this.minsEl.textContent = this.pad(mins);
+    this.secsEl.textContent = this.pad(secs);
   }
 
   showFinished() {
@@ -58,7 +62,6 @@ class DevCountdown {
   }
 }
 
-// дата завершення проекту
 const projectEndDate = new Date("2026-03-31T23:59:59").getTime();
 
 new DevCountdown("#dev-timer", projectEndDate);

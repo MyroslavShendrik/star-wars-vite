@@ -20,6 +20,10 @@ function createHeaderStars() {
     star.style.left = Math.random() * 100 + "%";
     star.style.top = Math.random() * 100 + "%";
 
+    const size = Math.random() * 3 + 2;
+    star.style.width = `${size}px`;
+    star.style.height = `${size}px`;
+
     starsContainer.appendChild(star);
     stars.push(star);
   }
@@ -28,20 +32,24 @@ function createHeaderStars() {
 //! проміс для однієї зірки
 function starPromise(star) {
   return new Promise((resolve) => {
-    const delay = 1000 + Math.random() * 4000;
+    const delay = 500 + Math.random() * 3000;
 
     const colors = ["#fff", "#ffd700", "#87ceeb", "#ff69b4"];
-
     const color = colors[Math.floor(Math.random() * colors.length)];
 
     star.style.background = color;
-    star.classList.add("glow");
 
+    //! старт мінімальна яскравість
+    star.style.opacity = 0.2;
+
+    //! плавний розгін до 100%
     setTimeout(() => {
-      star.classList.remove("glow");
-      star.style.opacity = 0.3;
+      star.classList.add("glow");
 
-      resolve(`Зірка згасла`);
+      //! постійне мерехтіння
+      star.style.animation = `twinkle ${1 + Math.random() * 2}s infinite ease-in-out`;
+
+      resolve("Зірка активна");
     }, delay);
   });
 }
@@ -51,7 +59,7 @@ function startStars() {
   const promises = stars.map((star) => starPromise(star));
 
   Promise.allSettled(promises).then(() => {
-    startStars();
+    console.log("Усі зірки активні");
   });
 }
 

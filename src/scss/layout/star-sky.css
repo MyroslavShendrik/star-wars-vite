@@ -1,7 +1,7 @@
 .header {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, #000814, #001d3d);
+  background: linear-gradient(to bottom, #003566, #000814);
 }
 
 .header-stars {
@@ -12,22 +12,43 @@
 
 .star {
   position: absolute;
-  width: 4px;
-  height: 4px;
   border-radius: 50%;
   background: white;
-  opacity: 0.3;
-  transition: all 0.5s ease;
+  opacity: 0.2;
+  transition: opacity 1s ease;
 }
 
 .glow {
-  box-shadow: 0 0 10px white, 0 0 20px white;
   opacity: 1;
+  box-shadow: 0 0 6px white, 0 0 12px white, 0 0 20px white;
 }
 
+@keyframes twinkle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .header__title,
 .header__menu,
 .dev-timer {
   position: relative;
   z-index: 2;
+}
+
+.dev-timer {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+
+.page-header {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #003566, #000814);
 }/*# sourceMappingURL=star-sky.css.map */

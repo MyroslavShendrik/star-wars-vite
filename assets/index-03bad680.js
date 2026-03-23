@@ -1,4 +1,0 @@
-import"./timer-93a7d13f.js";console.log("%c Зоряне небо в header Star Wars","color: white; background-color: #D33F49");const a=document.getElementById("header-stars"),l=40;let o=[];//! створення зірок
-function d(){a.innerHTML="",o=[];for(let t=0;t<l;t++){const e=document.createElement("div");e.className="star",e.style.left=Math.random()*100+"%",e.style.top=Math.random()*100+"%",a.appendChild(e),o.push(e)}}//! проміс для однієї зірки
-function i(t){return new Promise(e=>{const n=1e3+Math.random()*4e3,s=["#fff","#ffd700","#87ceeb","#ff69b4"],c=s[Math.floor(Math.random()*s.length)];t.style.background=c,t.classList.add("glow"),setTimeout(()=>{t.classList.remove("glow"),t.style.opacity=.3,e("Зірка згасла")},n)})}//! запуск усіх зірок
-function r(){const t=o.map(e=>i(e));Promise.allSettled(t).then(()=>{r()})}d();r();

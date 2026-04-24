@@ -145,7 +145,7 @@
 
   <ul class="sw-planets__list">
 
-    <li class="sw-planets__item planet-card">
+    <!-- <li class="sw-planets__item planet-card">
       <h3 class="planet-card__title">Tatooine</h3>
       <p class="planet-card__text">
         Піщана планета на краю галактики, осередок контрабандистів і мисливців за головами.
@@ -200,8 +200,14 @@
         Домівка вукі, планета гігантських дерев. Саме тут воював Йода під час
         Війн клонів.
       </p>
-    </li>
-
+    </li> -->
+<li class="sw-planets__item planet-card" data-id="1"> <!-- Tatooine -->
+<li class="sw-planets__item planet-card" data-id="9"> <!-- Coruscant -->
+<li class="sw-planets__item planet-card" data-id="8"> <!-- Naboo -->
+<li class="sw-planets__item planet-card" data-id="13"> <!-- Mustafar -->
+<li class="sw-planets__item planet-card" data-id="4"> <!-- Hoth -->
+<li class="sw-planets__item planet-card" data-id="7"> <!-- Endor -->
+<li class="sw-planets__item planet-card" data-id="14"> <!-- Kashyyyk -->
   </ul>
 </section>
 
@@ -385,11 +391,20 @@
 
   </div>
 </div>
+
+<div class="modal" id="planetModal">
+  <div class="modal__content">
+    <span class="modal__close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
 <script type="module" src="./js/forms-data.js"></script>
 <script type="module" src="./js/modal.js"></script>
 <script type="module" src="./js/films-modal.js"></script>
 <script type="module" src="./js/timer.js"></script>
 <script type="module" src="./js/charecter-modal.js"></script>
 <script type="module" src="./js/star-sky.js"></script>
+<script type="module" src="./js/planets-modal.js"></script>
 </body>
 </html>

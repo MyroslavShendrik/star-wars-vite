@@ -58,7 +58,8 @@ searchInput.addEventListener("input", () => {
     const name = card.dataset.name.toLowerCase();
 
     if (name.includes(value)) {
-      card.style.display = "list-item";
+      // card.style.display = "list-item";
+      card.style.display = "block";
     } else {
       card.style.display = "none";
     }

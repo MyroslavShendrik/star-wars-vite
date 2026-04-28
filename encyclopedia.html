@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Персонажі – Star Wars Fan Hub</title>
    
-  <script type="module" crossorigin src="/star-wars-vite/assets/encyclopedia-ee563ef9.js"></script>
+  <script type="module" crossorigin src="/star-wars-vite/assets/encyclopedia-dc4d5223.js"></script>
   <link rel="modulepreload" crossorigin href="/star-wars-vite/assets/star-sky-dce685fe.js">
   <link rel="stylesheet" href="/star-wars-vite/assets/star-sky-7e683d16.css">
 </head>
@@ -145,7 +145,7 @@
   <h2 class="sw-planets__title sw-section-title">
     Відомі планети Галактики
   </h2>
-
+ <input type="text" id="searchPlanet" placeholder="Пошук планети..." />
   <ul class="sw-planets__list">
 
     <!-- <li class="sw-planets__item planet-card">
@@ -204,13 +204,13 @@
         Війн клонів.
       </p>
     </li> -->
-<li class="sw-planets__item planet-card" data-id="1">Tatooine</li>
-<li class="sw-planets__item planet-card" data-id="9">Coruscant</li>
-<li class="sw-planets__item planet-card" data-id="8">Naboo</li>
-<li class="sw-planets__item planet-card" data-id="13">Mustafar</li>
-<li class="sw-planets__item planet-card" data-id="4">Hoth</li>
-<li class="sw-planets__item planet-card" data-id="7">Endor</li>
-<li class="sw-planets__item planet-card" data-id="14">Kashyyyk</li>
+    <li class="sw-planets__item planet-card" data-id="1" data-name="Tatooine">Tatooine</li>
+    <li class="sw-planets__item planet-card" data-id="9" data-name="Coruscant">Coruscant</li>
+    <li class="sw-planets__item planet-card" data-id="8" data-name="Naboo">Naboo</li>
+    <li class="sw-planets__item planet-card" data-id="13" data-name="Mustafar">Mustafar</li>
+    <li class="sw-planets__item planet-card" data-id="4" data-name="Hoth">Hoth</li>
+    <li class="sw-planets__item planet-card" data-id="7" data-name="Endor">Endor</li>
+    <li class="sw-planets__item planet-card" data-id="14" data-name="Kashyyyk">Kashyyyk</li>
   </ul>
 </section>
 
@@ -399,7 +399,7 @@
   <div class="modal__content">
     <span class="modal__close">&times;</span>
     <h2 id="modalTitle"></h2>
-    <p id="modalText"></p>
+    <div id="modalText"></div>
   </div>
 </div>
 
